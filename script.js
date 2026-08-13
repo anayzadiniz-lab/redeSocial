@@ -1,4 +1,7 @@
 //Botão curtidas(
 document.addEventListener("DOMContentLoaded", () => (
-    const likeBtn = document.querySelector (".left.actions")
+    const likeBtn = document.querySelector (".left.actions.action.btn:first.child");
+    if (condition) {
+        
+    }
 ))
