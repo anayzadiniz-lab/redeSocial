@@ -185,3 +185,43 @@ fill: none;
 stroke: currentColor;
 stroke-width: 2;
 }
+/* Nova Seção de Curtidas com Avatares Sobrepostos */
+.liked-by-section {
+  display: flex;
+  align-items: center; /* Alinha os avatares e o texto verticalmente */
+  gap: 10px;          /* Espaço entre os avatares e o texto */
+  padding: 0 16px;     /* Mantém o mesmo recuo lateral do post */
+}
+
+.liked-by-avatars {
+  display: flex;
+  position: relative;
+}
+
+.liked-by-avatars img {
+  width: 24px;         /* Tamanho da bolinha */
+  height: 24px;
+  border-radius: 50%;  /* Deixa redondo */
+  border: 2px solid white; /* A bordinha branca que dá o efeito de separação */
+  object-fit: cover;
+  position: relative;
+  /* Margem negativa faz a imagem da direita cobrir um pedaço da esquerda */
+  margin-left: -10px;
+}
+
+/* O primeiro avatar não precisa de margem negativa */
+.liked-by-avatars img:first-child {
+  margin-left: 0;
+}
+
+.likes-text {
+  font-size: 13px;
+  color: #262626;
+  margin: 0;
+}
+
+/* Garante que o texto dentro de strong fique negrito */
+.likes-text strong {
+  font-weight: 600;
+}
+
