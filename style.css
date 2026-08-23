@@ -150,9 +150,9 @@ stroke-linejoin: round;
 
 /* Texto de Curtidas */
 .post-details {
-padding: 8px 116px;
+padding: 8px 16px;
 font-size: 13px;
-color: #1c1e21;
+color: #1c1e21; width: 100%; box-sizing: border-box;
 }
 
 /* Barra de Navegação Inferior */
