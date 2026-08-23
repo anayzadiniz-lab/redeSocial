@@ -150,9 +150,10 @@ stroke-linejoin: round;
 
 /* Texto de Curtidas */
 .post-details {
-padding: 8px 16px;
-font-size: 13px;
-color: #1c1e21; width: 100%; box-sizing: border-box;
+  padding: 8px 16px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  text-align: left !important;
 }
 
 /* Barra de Navegação Inferior */
@@ -185,6 +186,7 @@ stroke-width: 2;
   justify-content: flex-start !important; /* Empurra tudo para a esquerda */
   gap: 8px !important; /* Espacinho entre as fotos e o texto */
   width: 100% !important;
+  margin: 0 !important;
   box-sizing: border-box !important;
 }
 
