@@ -177,43 +177,41 @@ fill: none;
 stroke: currentColor;
 stroke-width: 2;
 }
-/* Seção de Curtidas com Avatares e Texto Abaixo dos Botões */
+/* Seção de Curtidas com Avatares e Texto na Mesma Linha */
 .liked-by-section {
-  display: flex;
-  flex-direction: column; /* Joga o texto para a linha de baixo */
-  align-items: flex-start; /* Alinha tudo bem na esquerda */
-  gap: 6px;              /* Espaço entre as bolinhas e o texto "Liked by" */
-  padding: 0 16px;       /* Recuo lateral igual ao resto do post */
-  margin-top: 4px;       /* Um leve espaçamento vindo dos botões de cima */
+  display: flex !important;
+  flex-direction: row !important; /* Fotos e texto lado a lado */
+  align-items: center !important; /* Alinha no centro verticalmente */
+  justify-content: flex-start !important; /* Empurra tudo para a esquerda */
+  gap: 8px !important; /* Espacinho entre as fotos e o texto */
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 .liked-by-avatars {
-  display: flex;
-  position: relative;
+  display: flex !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
 }
 
 .liked-by-avatars img {
-  width: 22px;         /* Tamanho ideal para as bolinhas */
-  height: 22px;
-  border-radius: 50%;  /* Deixa redondinho */
-  border: 2px solid white; /* Bordinha branca de separação */
-  object-fit: cover;
-  position: relative;
-  margin-left: -8px;   /* Efeito de sobreposição */
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50% !important;
+  border: 1.5px solid #ffffff !important;
+  object-fit: cover !important;
+  margin-left: -8px !important;
 }
 
-/* A primeira foto não tem margem negativa */
 .liked-by-avatars img:first-child {
-  margin-left: 0;
+  margin-left: 0 !important;
 }
 
 .likes-text {
-  font-size: 13px;
-  color: #262626;
-  margin: 0;
+  font-size: 13px !important;
+  color: #1c1e21 !important;
+  margin: 0 !important;
+  white-space: nowrap !important; /* Impede que o texto quebre linha */
 }
 
-.likes-text strong {
-  font-weight: 600;
-  }
   
