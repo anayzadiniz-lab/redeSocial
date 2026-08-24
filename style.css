@@ -178,50 +178,14 @@ fill: none;
 stroke: currentColor;
 stroke-width: 2;
 }
-/* Seção de Curtidas com Avatares e Texto na Mesma Linha */
-.liked-by-section {
-  display: flex !important;
-  flex-direction: row !important; /* Fotos e texto lado a lado */
-  align-items: center !important; /* Alinha no centro verticalmente */
-  justify-content: flex-start !important; /* Empurra tudo para a esquerda */
-  gap: 8px !important; /* Espacinho entre as fotos e o texto */
-  width: 100% !important;
-  margin: 0 !important;
-  box-sizing: border-box !important;
-}
 
-.liked-by-avatars {
-  display: flex !important;
-  align-items: center !important;
-  flex-shrink: 0 !important;
-}
-
-.liked-by-avatars img {
-  width: 20px !important;
-  height: 20px !important;
-  border-radius: 50% !important;
-  border: 1.5px solid #ffffff !important;
-  object-fit: cover !important;
-  margin-left: -8px !important;
-}
-
-.liked-by-avatars img:first-child {
-  margin-left: 0 !important;
-}
-
-.likes-text {
-  font-size: 13px !important;
-  color: #1c1e21 !important;
-  margin: 0 !important;
-  white-space: nowrap !important; /* Impede que o texto quebre linha */
-}
-/* Estilos dos 3 Avatares sobre a Foto com Balão e Ícone Repostar */
+/* Posicionamento dos Avatares acima do Player */
 .photo-notes-container {
   position: absolute !important;
-  bottom: 20px !important;
+  bottom: 48px !important; /* Eleva os avatares acima da barra de tempo */
   left: 12px !important;
   display: flex !important;
-  gap: 10px !important;
+  gap: 12px !important;
   align-items: flex-end !important;
   z-index: 10 !important;
 }
@@ -233,21 +197,34 @@ stroke-width: 2;
   align-items: center !important;
 }
 
+/* Balãozinho estilizado para texto ou imagem */
 .speech-bubble {
-  background: rgba(40, 40, 40, 0.85) !important;
+  background: rgba(30, 30, 30, 0.85) !important;
   color: #ffffff !important;
   font-size: 10px !important;
-  padding: 4px 8px !important;
+  padding: 3px 6px !important;
   border-radius: 12px !important;
-  margin-bottom: 4px !important;
-  white-space: nowrap !important;
+  margin-bottom: 6px !important;
   backdrop-filter: blur(4px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  max-width: 50px !important;
+  max-height: 40px !important;
+  overflow: hidden !important;
+}
+
+.speech-bubble img {
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 6px !important;
+  object-fit: cover !important;
 }
 
 .user-badge {
   position: relative !important;
-  width: 36px !important;
-  height: 36px !important;
+  width: 32px !important;
+  height: 32px !important;
 }
 
 .user-badge img {
@@ -255,14 +232,14 @@ stroke-width: 2;
   height: 100% !important;
   border-radius: 50% !important;
   object-fit: cover !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.6) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.8) !important;
 }
 
 .repost-icon {
   position: absolute !important;
   bottom: -2px !important;
   right: -2px !important;
-  background: #7000ff !important; /* Roxo roxo do Instagram */
+  background: #7000ff !important;
   width: 14px !important;
   height: 14px !important;
   border-radius: 50% !important;
@@ -278,7 +255,8 @@ stroke-width: 2;
   stroke: #ffffff !important;
   stroke-width: 2.5 !important;
   fill: none !important;
-}
+  }
+  
 
 
   
