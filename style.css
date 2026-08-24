@@ -187,7 +187,7 @@ stroke-width: 2;
   display: flex !important;
   gap: 16px !important;
   align-items: flex-end !important;
-  z-index: 20 !important;
+  z-index: 9999 !important;
 }
 
 .note-avatar-wrapper {
@@ -197,24 +197,25 @@ stroke-width: 2;
   align-items: center !important;
 }
 
-/* Balão de fala/nota flutuante acima do avatar */
+/* Balão de fala/nota flutuante acima do avatar com tamanho forçado */
 .speech-bubble {
-  background: rgba(40, 40, 40, 0.9) !important;
+  background: rgba(30, 30, 30, 0.95) !important;
   padding: 4px !important;
-  border-radius: 14px !important;
-  margin-bottom: 6px !important;
+  border-radius: 12px !important;
+  margin-bottom: 8px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4) !important;
-  backdrop-filter: blur(6px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  min-width: 36px !important;
+  min-height: 36px !important;
 }
 
 .speech-bubble img {
   width: 32px !important;
   height: 32px !important;
-  border-radius: 10px !important;
+  border-radius: 8px !important;
   object-fit: cover !important;
   display: block !important;
 }
@@ -222,27 +223,27 @@ stroke-width: 2;
 /* Tamanho e estilo dos avatares */
 .user-badge {
   position: relative !important;
-  width: 32px !important;
-  height: 32px !important;
+  width: 34px !important;
+  height: 34px !important;
 }
 
 .user-badge img {
-  width: 100% !important;
-  height: 100% !important;
+  width: 34px !important;
+  height: 34px !important;
   border-radius: 50% !important;
   object-fit: cover !important;
   border: 2px solid #ffffff !important;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3) !important;
+  display: block !important;
 }
 
-/* Ícone de Repostar roxo (🔁) idêntico ao do Instagram */
+/* Ícone de Repostar (🔁) */
 .repost-icon {
   position: absolute !important;
-  bottom: -3px !important;
-  right: -3px !important;
+  bottom: -2px !important;
+  right: -2px !important;
   background: #7000ff !important;
-  width: 15px !important;
-  height: 15px !important;
+  width: 16px !important;
+  height: 16px !important;
   border-radius: 50% !important;
   display: flex !important;
   align-items: center !important;
@@ -257,6 +258,7 @@ stroke-width: 2;
   stroke-width: 2.5 !important;
   fill: none !important;
   }
+  
   
   
 
