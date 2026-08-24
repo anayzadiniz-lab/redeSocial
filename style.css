@@ -78,39 +78,83 @@ background-color: #eee;
   object-fit: cover;
 }
 
-/* Avatar pequeno com ícone '+' sobreposto na foto */
+/* Correção final das fotos e avatares */
+.photo-notes-container {
+  position: absolute !important;
+  bottom: 55px !important;
+  left: 12px !important;
+  display: flex !important;
+  gap: 8px !important;
+  align-items: flex-end !important;
+  z-index: 50 !important;
+}
+
+.note-avatar-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  position: relative !important;
+}
+
+.speech-bubble {
+  background: rgba(30, 30, 30, 0.9) !important;
+  padding: 3px !important;
+  border-radius: 8px !important;
+  margin-bottom: 4px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  width: 32px !important;
+  height: 32px !important;
+  box-sizing: border-box !important;
+}
+
+.speech-bubble img {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 6px !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
 .user-badge {
-position: absolute;
-bottom: 16px;
-left: 16px;
-width: 44px;
-height: 44px;
+  position: relative !important;
+  width: 28px !important;
+  height: 28px !important;
 }
 
 .user-badge img {
-width: 100%;
-height: 100%;
-border-radius: 50%;
-border: 2px solid #ffffff;
-object-fit: cover;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 2px solid #ffffff !important;
+  display: block !important;
+  box-sizing: border-box !important;
 }
 
-.user-badge .plus-icon {
-position: absolute;
-bottom: -2px;
-right: -2px;
-background: #9333ea;
-color: white;
-font-size: 10px;
-font-weight: bold;
-width: 16px;
-height: 16px;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-border: 2px solid #ffffff;
+.repost-icon {
+  position: absolute !important;
+  bottom: -2px !important;
+  right: -2px !important;
+  background: #7000ff !important;
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1px solid #ffffff !important;
 }
+
+.repost-icon svg {
+  width: 7px !important;
+  height: 7px !important;
+  stroke: #ffffff !important;
+  stroke-width: 3 !important;
+  fill: none !important;
+  }
 
 /* Ações (Curtir, Comentar, Repostar, Direct, Salvar) */
 .post-actions {
