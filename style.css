@@ -16,24 +16,20 @@ padding: 20px;
 
 /* Moldura estilo smartphone com borda em gradiente */
 .phone-frame {
-  width: 100%;
-  max-width: 380px;
-  height: 680px; /* <--- ADICIONE ESTA LINHA */
-  max-height: 90vh; /* <--- ADICIONE ESTA LINHA */
-  border-radius: 40px;
-  padding: 8px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  overflow: hidden; /* <--- ADICIONE ESTA LINHA */
+width: 100%;
+max-width: 380px;
+border-radius: 40px;
+padding: 8px;
+box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
 
 .phone-screen {
-  background: #ffffff;
-  border-radius: 32px;
-  overflow-y: auto; /* <--- ALTERE de hidden PARA auto */
-  display: flex;
-  flex-direction: column;
-  height: 100%; /* <--- ADICIONE ESTA LINHA */
+background: #ffffff;
+border-radius: 32px;
+overflow: hidden;
+display: flex;
+flex-direction: column;
 }
 
 /* Cabeçalho do Post */
@@ -82,87 +78,38 @@ background-color: #eee;
   object-fit: cover;
 }
 
-/* Correção final das fotos e avatares */
-.photo-notes-container {
-  position: absolute !important;
-  bottom: 55px !important;
-  left: 12px !important;
-  display: flex !important;
-  gap: 8px !important;
-  align-items: flex-end !important;
-  z-index: 50 !important;
-}
-
-.note-avatar-wrapper {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  position: relative !important;
-}
-
-.speech-bubble {
-  background: rgba(30, 30, 30, 0.9) !important;
-  padding: 3px !important;
-  border-radius: 8px !important;
-  margin-bottom: 4px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  border: 1px solid rgba(255, 255, 255, 0.25) !important;
-  width: 32px !important;
-  height: 32px !important;
-  box-sizing: border-box !important;
-}
-
-.speech-bubble img {
-  width: 100% !important;
-  height: 100% !important;
-  border-radius: 6px !important;
-  object-fit: cover !important;
-  display: block !important;
-}
-
+/* Avatar pequeno com ícone '+' sobreposto na foto */
 .user-badge {
-  position: relative !important;
-  width: 28px !important;
-  height: 28px !important;
+position: absolute;
+bottom: 16px;
+left: 16px;
+width: 44px;
+height: 44px;
 }
 
 .user-badge img {
-  width: 100% !important;
-  height: 100% !important;
-  border-radius: 50% !important;
-  object-fit: cover !important;
-  border: 2px solid #ffffff !important;
-  display: block !important;
-  box-sizing: border-box !important;
+width: 100%;
+height: 100%;
+border-radius: 50%;
+border: 2px solid #ffffff;
+object-fit: cover;
 }
 
-.repost-icon {
-  position: absolute !important;
-  bottom: -2px !important;
-  right: -2px !important;
-  background: #7000ff !important;
-  width: 12px !important;
-  height: 12px !important;
-  border-radius: 50% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  border: 1px solid #ffffff !important;
-}
-
-.repost-icon svg {
-  width: 7px !important;
-  height: 7px !important;
-  stroke: #ffffff !important;
-  stroke-width: 3 !important;
-  fill: none !important;
-  }
-
-.photo-notes-container img {
-  max-width: 100% !important;
-  max-height: 100% !important;
+.user-badge .plus-icon {
+position: absolute;
+bottom: -2px;
+right: -2px;
+background: #9333ea;
+color: white;
+font-size: 10px;
+font-weight: bold;
+width: 16px;
+height: 16px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+border: 2px solid #ffffff;
 }
 
 /* Ações (Curtir, Comentar, Repostar, Direct, Salvar) */
@@ -231,3 +178,42 @@ fill: none;
 stroke: currentColor;
 stroke-width: 2;
 }
+/* Seção de Curtidas com Avatares e Texto na Mesma Linha */
+.liked-by-section {
+  display: flex !important;
+  flex-direction: row !important; /* Fotos e texto lado a lado */
+  align-items: center !important; /* Alinha no centro verticalmente */
+  justify-content: flex-start !important; /* Empurra tudo para a esquerda */
+  gap: 8px !important; /* Espacinho entre as fotos e o texto */
+  width: 100% !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.liked-by-avatars {
+  display: flex !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+}
+
+.liked-by-avatars img {
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50% !important;
+  border: 1.5px solid #ffffff !important;
+  object-fit: cover !important;
+  margin-left: -8px !important;
+}
+
+.liked-by-avatars img:first-child {
+  margin-left: 0 !important;
+}
+
+.likes-text {
+  font-size: 13px !important;
+  color: #1c1e21 !important;
+  margin: 0 !important;
+  white-space: nowrap !important; /* Impede que o texto quebre linha */
+}
+
+  
