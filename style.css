@@ -216,4 +216,19 @@ stroke-width: 2;
   white-space: nowrap !important; /* Impede que o texto quebre linha */
 }
 
+/* Estado de curtido */
+.action-btn.liked {
+  color: #ff3040;
+}
+
+.action-btn.liked svg {
+  fill: #ff3040;
+  stroke: #ff3040;
+}
+
+.action-btn svg {
+  transition: transform 0.15s ease, fill 0.15s ease;
+}
+
+
   
