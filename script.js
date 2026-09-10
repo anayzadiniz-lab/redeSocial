@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!likeBtn) return;
 
   // 2. Variáveis de estado inicial
-  let baseLikes = 259000000; // Valor inicial correspondente aos 259M do HTML
+  let baseLikes = 259000000; // Valor inicial correspondente aos 1K do HTML
   let isLiked = false;
 
   // Garante que o texto dentro do botão esteja em uma <span> para fácil manipulação
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     likesCountSpan = document.createElement("span");
     likesCountSpan.className = "likes-count";
     
-    // Extrai o nó de texto "259M" do botão e move para dentro da <span>
+    // Extrai o nó de texto "1K" do botão e move para dentro da <span>
     const textNode = Array.from(likeBtn.childNodes).find(
       (node) => node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== ""
     );
